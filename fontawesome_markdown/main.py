@@ -18,7 +18,7 @@ class FontAwesomePattern(Pattern):
         el = etree.Element('i')
         icon_name = m.group(2)
         if icon_name in icons:
-            el.attrib = {'class': 'fa fa-{0}'.format(icon_name)}
+            el.attrib = {'class': 'icon-{0}'.format(icon_name)}
             return el
         message = "{0} isn't a FA icon I know about".format(icon_name)
         raise FontAwesomeException(message)
